@@ -1,5 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
+
 
 
 // 1 The function will randomly pick a number between 0-2
@@ -36,8 +35,7 @@ function getComputerChoice() {
 // Use console.log to check the player's choice 
 
 function getHumanChoice() {
-    let humanChoice;
-    humanChoice = prompt("What's your choice, rock, paper or scissors?")
+    let humanChoice = prompt("What's your choice, rock, paper or scissors?")
     humanChoice = humanChoice.toLowerCase();
     return humanChoice;
 }
@@ -51,20 +49,23 @@ function getHumanChoice() {
 // Show the round winner one of the results: "You win/lose, Paper beats Rock / Rock beats Scissors, Scissors beats Paper" or "The game was tied! rock vs rock || paper vs paper || scissors vs scissors."
 // Increment the winner's score by 1 
 
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+    function playRound(humanChoice, computerChoice) {
     computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice()
+    humanChoice = getHumanChoice();
 
     // IF computer wins
     if (computerChoice == "rock" && humanChoice == "scissors") {
-        console.log("You lose! Rock beats Scissors");
+        console.log("The computer wins! Rock beats Scissors");
         computerScore++;
     } else if (computerChoice == "paper" && humanChoice == "rock" ) {
-        console.log("You lose! Paper beats Rock")
+        console.log("The computer wins! Paper beats Rock")
         computerScore++;
     } else if (computerChoice == "scissors" && humanChoice == "paper") {
-        console.log("You lose! Scissors beats Paper")
+        console.log("The computer wins! Scissors beats Paper")
         computerScore++;
 
     // IF human wins
@@ -87,6 +88,28 @@ function playRound(humanChoice, computerChoice) {
        console.log("The game was tied! Scissors vs Scissors")  
     }
 }
+// The game have 5 rounds
+    playRound();
+    console.log("The score is now: " + humanScore + " : " + computerScore + "!");
+
+    playRound();
+    console.log("The score is now: " + humanScore + " : " + computerScore + "!");
+
+    playRound();
+    console.log("The score is now: " + humanScore + " : " + computerScore + "!");
+
+    playRound();
+    console.log("The score is now: " + humanScore + " : " + computerScore + "!");
+    playRound();
+    
+    if (humanScore > computerScore) {
+        console.log("You're the winner!")
+    } else {
+        console.log("Oop! The computer is the winner!")
+    }
+}
+
+playGame();
 
 
 
