@@ -4,6 +4,7 @@
 // then the function returns "rock"
 // ELSE IF the random number is 1, then the function returns "paper"
 // ELSE the random number is 2, then the function returns "scissors"
+// 4 The program should display the choice of the computer
 
 function getComputerChoice() {
     let num;
@@ -25,4 +26,8 @@ function getComputerChoice() {
 
 let result = getComputerChoice();
 console.log(result);
+
+
+
+
 
