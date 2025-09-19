@@ -1,6 +1,3 @@
-
-
-
 // 1 The function will randomly pick a number between 0-2
 // 2 Store the num as a variable
 // 3 IF the random number is 0,
